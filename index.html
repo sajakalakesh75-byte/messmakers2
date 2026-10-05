@@ -6,13 +6,14 @@
 <title>Mess Makers – Our Services</title>
 <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff1dc;--card:#fff8ec;--ink:#111;--pink:#ff1f8e;--soft:#f06fa0;--line:#f3dcbc;--chip:#ffe3bf;
+:root{--bg:#fff1dc;--card:#fff8ec;--ink:#111;--pink:#ff1f8e;--soft:#f06fa0;--line:#f3dcbc;--chip:#ffe3bf;--tex:.12;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 :root:not([data-theme="light"]){}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e1620;--card:#2c212f;--ink:#fff4e6;--line:#43344a;--chip:#3a2b40}}
-:root[data-theme="dark"]{--bg:#1e1620;--card:#2c212f;--ink:#fff4e6;--line:#43344a;--chip:#3a2b40}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e1620;--card:#2c212f;--ink:#fff4e6;--line:#43344a;--chip:#3a2b40;--tex:.07}}
+:root[data-theme="dark"]{--bg:#1e1620;--card:#2c212f;--ink:#fff4e6;--line:#43344a;--chip:#3a2b40;--tex:.07}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
 *{box-sizing:border-box}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:var(--tex);background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><g fill='%23ff1f8e'><circle cx='24' cy='30' r='5'/><circle cx='34' cy='38' r='2'/><circle cx='150' cy='170' r='6'/><circle cx='160' cy='182' r='2.5'/></g><g fill='%231f8fff'><circle cx='120' cy='22' r='6'/><circle cx='132' cy='32' r='2'/><circle cx='36' cy='150' r='5'/></g><g fill='%23ffd90f'><circle cx='188' cy='84' r='7'/><circle cx='176' cy='96' r='2.5'/><circle cx='80' cy='100' r='4'/></g><g fill='%2317d68a'><circle cx='70' cy='196' r='5'/><circle cx='82' cy='204' r='2'/><circle cx='200' cy='20' r='3'/></g><g fill='%23ff8a1f'><circle cx='100' cy='150' r='5'/><circle cx='20' cy='96' r='3'/></g><g fill='%239b6cf0'><circle cx='180' cy='140' r='4'/><circle cx='60' cy='60' r='3'/></g><g fill='none' stroke-width='3' stroke-linecap='round'><path d='M70 30q6-6 12 0' stroke='%23ff4d5e'/><path d='M150 110q6-6 12 0' stroke='%231f8fff'/><path d='M20 190q6-6 12 0' stroke='%23ff8a1f'/><path d='M120 70q6-6 12 0' stroke='%239b6cf0'/></g></svg>") 0 0/220px 220px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,sans-serif;padding-bottom:110px}
 .drips{display:flex;height:120px;max-width:720px;margin:0 auto;padding:0 8%}
 .drips i{flex:1;border-radius:0 0 40px 40px;margin:0 1px;animation:drip 3.2s ease-in-out infinite alternate}
@@ -23,7 +24,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-u
 .hero .script{font-family:Caveat,cursive;font-size:2.4rem;line-height:1;margin-top:18px}
 .hero h1{font-family:Chewy,cursive;font-weight:400;color:var(--pink);font-size:4.2rem;line-height:1;margin:0}
 .hero p{margin:8px auto 0;max-width:30ch;opacity:.75;font-size:.9rem}
-.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:calc(env(safe-area-inset-top,0px) + 8px) 0 8px;border-bottom:1px solid var(--line)}
+.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:calc(env(safe-area-inset-top,0px) + 8px) 0 8px;border-bottom:1px solid var(--line)}
 .wrap{max-width:720px;margin:0 auto;padding:0 14px}
 .search{width:100%;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:10px 16px;font:600 .9rem Poppins,sans-serif;margin-bottom:8px}
 .search:focus{outline:none;border-color:var(--pink)}
